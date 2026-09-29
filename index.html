@@ -3,15 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Solis — Legal</title>
-  <meta name="description" content="Solis legal and privacy documents.">
+  <title>Solis — Chess Analysis, Refined</title>
+  <meta name="description" content="Solis is a desktop chess analysis application built for focused play, engine analysis, and clearer decisions.">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <div class="site-glow site-glow-left" aria-hidden="true"></div>
+  <div class="site-glow site-glow-right" aria-hidden="true"></div>
+
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="/"><span class="brand-mark">S</span><span>SOLIS</span></a>
-      <nav class="nav-links" aria-label="Legal navigation">
+      <a class="brand" href="/" aria-label="Solis home">
+        <span class="brand-mark">S</span>
+        <span>SOLIS</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features">Features</a>
         <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
         <a href="/cookies">Cookies</a>
@@ -19,26 +26,87 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="eyebrow">Solis Chess Analysis</div>
-      <h1>Legal &amp; Privacy</h1>
-      <p>Information about how Solis handles accounts, data, authentication, cookies, subscriptions, and use of the application.</p>
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span>Desktop chess analysis</div>
+        <h1>See the position.<br><span>Understand the move.</span></h1>
+        <p>Solis brings focused chess analysis, local engine power, and a clean workspace into one desktop experience.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#features">Explore Solis <span>↗</span></a>
+          <a class="button button-secondary" href="/privacy">Privacy-first by design</a>
+        </div>
+      </div>
+
+      <div class="hero-preview" aria-label="Solis application preview">
+        <div class="preview-bar">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>SOLIS / ANALYSIS</span>
+          <span class="preview-live">LIVE</span>
+        </div>
+        <div class="preview-frame">
+          <img src="/app.png" alt="Solis application interface preview">
+          <div class="preview-overlay">
+            <div class="overlay-card">
+              <span class="overlay-label">ENGINE</span>
+              <strong>Analysis ready</strong>
+              <span class="overlay-value">Local evaluation</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="cards" aria-label="Legal documents">
-      <a class="card" href="/privacy">
-        <h2>Privacy Policy</h2>
-        <p>How Solis collects, uses, stores, protects, and deletes personal information.</p>
-      </a>
-      <a class="card" href="/terms">
-        <h2>Terms of Service</h2>
-        <p>The rules and conditions that apply when using Solis and its related services.</p>
-      </a>
-      <a class="card" href="/cookies">
-        <h2>Cookie Policy</h2>
-        <p>How cookies and browser storage may be used by Solis and connected services.</p>
-      </a>
+    <section class="signal-strip">
+      <div class="container signal-grid">
+        <div><span class="signal-number">01</span><span>Focused workspace</span></div>
+        <div><span class="signal-number">02</span><span>Local chess engines</span></div>
+        <div><span class="signal-number">03</span><span>Desktop-first design</span></div>
+      </div>
+    </section>
+
+    <section class="features container" id="features">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Built around the board</div>
+          <h2>Less clutter. More signal.</h2>
+        </div>
+        <p>Solis is designed to keep analysis close to the position without turning the interface into a dashboard of distractions.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-large">
+          <span class="feature-index">01 / ANALYSIS</span>
+          <h3>Engine analysis without leaving your workspace.</h3>
+          <p>Keep the board, evaluation, and supporting tools in one focused desktop environment.</p>
+          <div class="feature-line" aria-hidden="true"></div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-index">02 / PERFORMANCE</span>
+          <h3>Use the power of your own machine.</h3>
+          <p>Local engine processing keeps core analysis close to the device.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-index">03 / CLARITY</span>
+          <h3>Information where it matters.</h3>
+          <p>Readable hierarchy, restrained motion, and clear visual feedback keep the board in control.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="legal-panel container">
+      <div class="legal-copy">
+        <div class="eyebrow">Solis documents</div>
+        <h2>Clear about the service.</h2>
+        <p>Review how Solis handles privacy, cookies, accounts, and use of the application.</p>
+      </div>
+      <div class="legal-links">
+        <a href="/privacy"><span>Privacy Policy</span><b>↗</b></a>
+        <a href="/terms"><span>Terms of Service</span><b>↗</b></a>
+        <a href="/cookies"><span>Cookie Policy</span><b>↗</b></a>
+      </div>
     </section>
   </main>
 
