@@ -45,7 +45,7 @@ if (!is_array($metadata)) $metadata = [];
 
 $stmt = $pdo->prepare(
     'INSERT INTO telemetry_events (user_id, event_name, app_version, metadata_json, ip_hash, created_at)
-     VALUES (?, ?, ?, ?, SHA2(CONCAT(?, :salt), 256), UTC_TIMESTAMP())'
+     VALUES (?, ?, ?, ?, SHA2(CONCAT(?, ?), 256), UTC_TIMESTAMP())'
 );
 $stmt->execute([
     $userId,
@@ -53,7 +53,7 @@ $stmt->execute([
     substr($version, 0, 32),
     json_encode($metadata, JSON_UNESCAPED_SLASHES),
     client_ip(),
-    ':salt' => getenv('SOLIS_IP_SALT') ?: 'CHANGE_IP_SALT'
+    getenv('SOLIS_IP_SALT') ?: 'CHANGE_IP_SALT'
 ]);
 
 json_response(['ok' => true]);
